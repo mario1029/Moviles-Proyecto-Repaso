@@ -1,0 +1,28 @@
+{
+  "name": "moviles-proyecto-repaso",
+  "version": "1.0.0",
+  "description": "Proyecto Repaso Web 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mario1029/Moviles-Proyecto-Repaso.git"
+  },
+  "keywords": [
+    "web2"
+  ],
+  "author": "Mario González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mario1029/Moviles-Proyecto-Repaso/issues"
+  },
+  "homepage": "https://github.com/mario1029/Moviles-Proyecto-Repaso#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2"
+  }
+}
