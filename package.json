@@ -22,8 +22,10 @@
   "homepage": "https://github.com/mario1029/Moviles-Proyecto-Repaso#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.2"
+    "express-session": "^1.17.2",
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
