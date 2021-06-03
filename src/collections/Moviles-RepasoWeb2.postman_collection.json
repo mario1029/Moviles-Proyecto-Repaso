@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "0415b704-5427-4f58-b6fb-d935d95e9929",
+		"name": "Moviles-RepasoWeb2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vista principal de registro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cedula",
+							"value": "27969414",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "mario",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "gonzález",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "por ahi",
+							"type": "text"
+						},
+						{
+							"key": "contra",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cedula",
+							"value": "27969414",
+							"type": "text"
+						},
+						{
+							"key": "contra",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiar datos de usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cedula",
+							"value": "27969414",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "mario jose",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "gonzález sanchez",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "por aqui",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/27969414",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"27969414"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cerrar sesion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pedir info usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/27969414",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"27969414"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/27969414",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"27969414"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ingresar producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_producto",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Cepillado de fresa",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "2.15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_producto",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Cepillado de piña",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "4.26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pedir todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pedir un producto con id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_producto",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Cepillado de piña",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "4.26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cedula",
+							"value": "27969414",
+							"type": "text"
+						},
+						{
+							"key": "id_factura",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "id_producto",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrar orden",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cedula",
+							"value": "27969414",
+							"type": "text"
+						},
+						{
+							"key": "id_factura",
+							"value": "123457890",
+							"type": "text"
+						},
+						{
+							"key": "id_producto",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders/123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

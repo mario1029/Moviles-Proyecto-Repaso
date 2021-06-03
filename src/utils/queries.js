@@ -9,6 +9,10 @@ const queries = {
   UPDATE_PRODUCT: `UPDATE producto SET id_producto = $1, nombre = $2, precio = $3 WHERE id_producto = $4 RETURNING *`,
   NEW_PRODUCT: `INSERT INTO producto (id_producto, nombre, precio) VALUES ($1,$2,$3) RETURNING *`,
   DELETE_PRODUCT: `DELETE FROM producto WHERE id_producto = $1`,
+  NEW_BILL: `INSERT INTO factura (id_factura, cedula) VALUES ($1,$2) RETURNING *`,
+  NEW_ORDER: `INSERT INTO orden (id_factura, id_producto) VALUES ($1,$2) RETURNING *`,
+  GET_ORDER_BY_ID: `SELECT * FROM orden WHERE id_factura = $1`,
+  DELETE_ORDER: `DELETE FROM factura WHERE id_factura = $1`,
 };
 
 module.exports = queries;
