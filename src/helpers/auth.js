@@ -28,18 +28,39 @@ const signUpUser = async function(body){
   } finally {
     	client.release();
   }
-
-/*	
-	try{
-		const response = await client.query(
-			  "insert into cliente values (1,'Mario','G','por ahi','123')",
-			  (err, result) => {}
-			)
-		console.log('exito')
-	}catch(e){
-		console.log(e);
-	}
-*/
 }
 
-module.exports = {signUpUser};
+const comparePassword = (candidate, hash) => {
+  return new Promise((res, rej) => {
+    compare(candidate, hash, (err, isMatch) => {
+      if (err) rej(err);
+      res(isMatch);
+    });
+  });
+};
+
+const getUserByID = async (cedula)=> {
+
+  const client = await pool.connect();
+  
+  try {
+    const response = (await client.query(queries.GET_USER_BY_ID, [cedula])).rows;
+    const users = response.map((row) => {
+      return {
+        cedula: row.cedula,
+        nombre: row.nombre,
+        apellido: row.appellido,
+        direccion: row.direccion,
+        contra: row.contra,
+      };
+    });
+
+    return users[0];
+  } catch (e) {
+    	throw e;
+  } finally {
+    	client.release();
+  }
+};
+
+module.exports = {signUpUser, comparePassword, getUserByID};
